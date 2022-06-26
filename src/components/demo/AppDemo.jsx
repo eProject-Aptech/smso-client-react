@@ -4,6 +4,5 @@ export const AppDemo = () => {
   return (
 
     <div>Hello World</div>
-
   )
 }
