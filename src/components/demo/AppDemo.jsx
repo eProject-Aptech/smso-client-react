@@ -2,6 +2,7 @@ import React from 'react'
 
 export const AppDemo = () => {
   return (
-<div>Hello, I am Tuan Nguyen Trung</div>
+
+    <div>Hello World</div>
   )
 }
