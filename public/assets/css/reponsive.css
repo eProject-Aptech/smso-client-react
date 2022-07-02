@@ -62,11 +62,15 @@
     .slider_section .carousel_btn-container {
         display: none;
     }
+
 }
 
 @media (max-width: 768px) {
 
-
+    .carousel-item .container {
+        margin-top: -15rem;
+    }
+            
 
 
     .slider_section .carousel_btn-container {
@@ -162,7 +166,11 @@
     }
 }
 
-@media (max-width: 480px) {}
+@media (max-width: 480px) {
+    .carousel-item.container {
+        padding-top: -13rem;
+    }
+}
 
 @media (max-width: 420px) {}
 

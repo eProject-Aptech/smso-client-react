@@ -1,39 +1,83 @@
-import React, { useEffect } from 'react'
-import axios from 'axios'
-import { useState } from 'react'
+import React from 'react'
+import './homepage.styles.scss'
+import slideimg from '../../assets/images/slider-img.png'
+import {motion} from 'framer-motion'
+import {NavLink, Link} from 'react-router-dom'
+
+import img from  '../../assets/images/hero-bg.png'
+
+import styled from 'styled-components'
 
 const Homepage = () => {
-    const [state, setState] = useState([]);
-
-    // const options = {
-    //     method: "GET",
-    //     url: "https://reqres.in/api/users",
-    //     params: {
-    //         region_province: selectedProvince,
-    //         iso: "IND",
-    //         date: "2022-04-01",
-    //     },
-    //     headers: {
-    //         "X-RapidAPI-Host": "covid-19-statistics.p.rapidapi.com",
-    //         "X-RapidAPI-Key": "fbdff7e1bdmsh0d25a8cd1b29338p1ee46bjsn8d137e63eddc",
-    //     }
-    // }
-    const getFunction = () => {
-        axios.get('https://reqres.in/api/users').then((response) => {
-            setState(response.data)
-        })
-    }
-    useEffect(() => {
-        getFunction();
-    },[])
-    return (
-        <div>
-            <h1>{state.map(item,index) => (
-                <h2>item.email</h2>
-            )
-        </h1>
+  return (
+    <motion.div
+      animate={{ opacity: 1 }}
+      initial={{ opacity: 0 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+    >
+      <Hero>
+        <div className="hero_area">
+          <section className=" slider_section ">
+            <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
+              <div className="carousel-inner">
+                <div className="carousel-item active">
+                  <div className="container">
+                    <div className="row">
+                      <div className="col-lg-5 col-md-6">
+                        <div className="slider_detail-box">
+                          <h1>
+                            SMS Online <br /> Trò chuyện nhóm cho toàn cầu.
+                            Với SMSO làm việc theo nhóm sẽ
+                            <br />
+                            trở nên dễ dàng hơn.
+                          </h1>
+                          <p>
+                            Cách đơn giản nhất để cộng tác nhóm từ xa.
+                          </p>
+                          <div className="btn-box">
+                          
+                            <Link className="btn-1" to="/">Getting Started</Link>
+                              
+                          
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-md-6">
+                        <div className="slider_img-box">
+                          <img src={slideimg} alt="img" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
-    )
+      </Hero>
+    </motion.div>
+  )
 }
 
 export default Homepage
+
+const Hero = styled.div`
+    & {
+      height: 84vh;
+      background: -webkit-gradient(linear, left top, right top, from(#864ddf), to(#203376));
+      background: linear-gradient(to right, #864ddf, #203376);
+    }
+
+    &::before  {
+      content: "";
+      position: absolute;
+      width: 58%;
+      height: 86%;
+      background-image: url(${img});
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      top: 47px;
+      right: 0;
+  }
+`;
