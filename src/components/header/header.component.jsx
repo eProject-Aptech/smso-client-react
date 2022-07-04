@@ -20,8 +20,28 @@ const Header = () => {
                         >
 
                             <Link to={"/"}><Nav.Link href="#1">Home</Nav.Link></Link>
+                            
+                            {/* <Nav.Link href="#1">
+                                <Link to={"/"}>
+                                    Home
+                                </Link>
+                            </Nav.Link> */}
+                            
+
                             <Link to={"/about"}><Nav.Link href="#2">About us</Nav.Link></Link>
+                            {/* <Nav.Link href="#2">
+                                <Link to={"/about"}>
+                                    About us
+                                </Link>
+                            </Nav.Link> */}
+
+
                             <Link to={"/contact"}><Nav.Link href="#3">Contact</Nav.Link></Link>
+                            {/* <Nav.Link href="#3">
+                                <Link to={"/contact"}>
+                                    Contact
+                                </Link>
+                            </Nav.Link> */}
 
                             
                             {/* <NavDropdown title="Link" id="navbarScrollingDropdown">
@@ -37,9 +57,19 @@ const Header = () => {
                             </Nav.Link> */}
 
                             <Link to={"/sign"}><Nav.Link href="#4">Sign</Nav.Link></Link>
+                            {/* <Nav.Link href="#4">
+                                <Link to={"/sign"}>
+                                    Sign
+                                </Link>
+                            </Nav.Link> */}
 
 
                             <Link to={"/demologin"}><Nav.Link href="#5">Demo Login</Nav.Link></Link>
+                            {/* <Nav.Link href="#5">
+                                <Link to={"/demologin"}>
+                                    Demo Login
+                                </Link>
+                            </Nav.Link> */}
 
                         </Nav>
                         <Form className="d-flex">

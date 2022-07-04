@@ -37,7 +37,7 @@ const Homepage = () => {
                           </p>
                           <div className="btn-box">
                           
-                            <Link className="btn-1" to="/">Getting Started</Link>
+                            <Link className="btn-1" to="/sign">Getting Started</Link>
                               
                           
                           </div>
