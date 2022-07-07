@@ -5,7 +5,7 @@ import Homepage from '../pages/homepage/homepage.component'
 import About from '../pages/about/About.component'
 import Contact from '../pages/contact/contact.component'
 import Sign from '../pages/sign/Sign.component'
-import LoginDemo from '../demoApi/demoLogin/Login.component'
+// import LoginDemo from '../demoApi/demoLogin/Login.component'
 import FormUser from '../components/form-user-required/form-user.component'
 
 const View = () => {
