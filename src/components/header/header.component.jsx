@@ -1,7 +1,9 @@
 import React from 'react'
-import { Navbar, Container, Nav, NavDropdown, FormControl, Button, Form } from 'react-bootstrap'
+import { Navbar, Container, Nav, FormControl, Button, Form } from 'react-bootstrap'
 import logo from '../../assets/logo/images-removebg-preview.png'
 import './header.styles.scss'
+
+import styled from 'styled-components'
 
 import { Link } from 'react-router-dom'
 
@@ -10,7 +12,7 @@ const Header = () => {
         
             <Navbar bg="light" expand="lg">
                 <Container fluid>
-                    <Navbar.Brand href="#"><img className='logo-bg' src={logo} alt="img"/></Navbar.Brand>
+                    <Navbar.Brand href="/"><img className='logo-bg' src={logo} alt="img"/></Navbar.Brand>
                     <Navbar.Toggle aria-controls="navbarScroll" />
                     <Navbar.Collapse id="navbarScroll">
                         <Nav
@@ -37,6 +39,7 @@ const Header = () => {
 
 
                             <Link to={"/contact"}><Nav.Link href="#3">Contact</Nav.Link></Link>
+                            <Link to={"/form"}><Nav.Link href="#5">Form</Nav.Link></Link>
                             {/* <Nav.Link href="#3">
                                 <Link to={"/contact"}>
                                     Contact
@@ -56,18 +59,10 @@ const Header = () => {
                                 Link
                             </Nav.Link> */}
 
-                            <Link to={"/sign"}><Nav.Link href="#4">Sign</Nav.Link></Link>
+                            
                             {/* <Nav.Link href="#4">
                                 <Link to={"/sign"}>
                                     Sign
-                                </Link>
-                            </Nav.Link> */}
-
-
-                            <Link to={"/demologin"}><Nav.Link href="#5">Demo Login</Nav.Link></Link>
-                            {/* <Nav.Link href="#5">
-                                <Link to={"/demologin"}>
-                                    Demo Login
                                 </Link>
                             </Nav.Link> */}
 
@@ -79,13 +74,16 @@ const Header = () => {
                                 className="me-2"
                                 aria-label="Search"
                             />
-                            <Button variant="outline-secondary">Search</Button>
+                            <button className='customButton' >Search</button>
                         </Form>
+                            <Link to={"/sign"}><Nav.Link href="#4"><button className='customButton' >Sign In</button></Nav.Link></Link>
+                            
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
     )
 }
+
 
 export default Header
 

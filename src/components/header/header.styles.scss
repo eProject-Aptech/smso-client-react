@@ -1,0 +1,22 @@
+.customButton {
+    min-width: 80px;
+    margin-left: -6px;
+    height: 40px;
+    padding: 0 20px 0 20px;
+    font-size: 10px;
+    background-color: white;
+    color: black;
+    text-transform: uppercase;
+    font-weight: bolder;
+    border: 1px solid black;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 6px;
+
+    &:hover {
+        background-color: #a053f9;
+        color: white;
+        border: none;
+        // border: 1px solid black;
+    }
+}

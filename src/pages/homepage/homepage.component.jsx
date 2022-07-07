@@ -2,7 +2,7 @@ import React from 'react'
 import './homepage.styles.scss'
 import slideimg from '../../assets/images/slider-img.png'
 import {motion} from 'framer-motion'
-import {NavLink, Link} from 'react-router-dom'
+import { Link} from 'react-router-dom'
 
 import img from  '../../assets/images/hero-bg.png'
 
@@ -64,6 +64,7 @@ export default Homepage
 
 const Hero = styled.div`
     & {
+      margin-bottom: 50rem;
       height: 84vh;
       background: -webkit-gradient(linear, left top, right top, from(#864ddf), to(#203376));
       background: linear-gradient(to right, #864ddf, #203376);

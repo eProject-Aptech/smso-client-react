@@ -7,28 +7,28 @@ export class UserService extends baseService {
     }
     //LOGIN API
     login = (dataInfo) => {
-        return this.post("/api/users/login", dataInfo);
+        return this.post("/api/Users/login", dataInfo);
     };
     //REGISTER API
     register = (dataInfo) => {
-        return this.post("/api/users", dataInfo);
+        return this.post("/api/Users/registerUser", dataInfo);
     };
     //GET ALL API
-    getAllUsers = () => {
-        return this.get("/api/users");
-    };
+    // getAllUsers = () => {
+    //     return this.get("/api/Users");
+    // };
     //DELETE API
-    deleteUser = (id) => {
-        return this.delete(`/api/users/${id}`);
-    };
+    // deleteUser = (id) => {
+    //     return this.delete(`/api/Users/${id}`);
+    // };
     //GET ONE USER
-    getOneUser = (id) => {
-        return this.get(`/api/users/${id}`);
-    };
+    // getOneUser = (id) => {
+    //     return this.get(`/api/Users/${id}`);
+    // };
     //UPDATE USER
-    updateUser = (id, dataInfo) => {
-        return this.put(`/api/users/${id}`, dataInfo);
-    };
+    // updateUser = (id, dataInfo) => {
+    //     return this.put(`/api/users/${id}`, dataInfo);
+    // };
 }
 
 export const userService = new UserService();

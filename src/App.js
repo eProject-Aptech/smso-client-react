@@ -3,13 +3,15 @@ import {BrowserRouter} from 'react-router-dom'
 
 import Header from './components/header/header.component';
 import View from './views/Views.component';
+import Footer from './components/footer/footer.component';
 
 function App() {
   return (
     <div className="hero_area">
       <BrowserRouter>
         <Header/>
-        <View/>
+          <View/>
+        <Footer/>
       </BrowserRouter>
     </div>
   );
